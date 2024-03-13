@@ -35,8 +35,8 @@ function AddReview() {
             } else {
                 console.log(response.data);
             }
-            const movieData = await axios.get('https://backends-theta.vercel.app/movies');
-            console.log(movieData);
+            // const movieData = await axios.get('https://backends-theta.vercel.app/movies');
+            // console.log(movieData);
         } catch (error) {
             console.error("Error submitting review:", error);
             toast.error("An error occurred while submitting your review. Please try again later.");
