@@ -29,14 +29,14 @@ function AddReview() {
                 rating: rating,
                 reviewComments: reviewComments
             });
-            toast.success("Your Review has been submitted!");
             if (response.data.error) {
                 throw new Error(response.data.error);
             } else {
                 console.log(response.data);
+                toast.success("Your Review has been submitted!");
             }
-            // const movieData = await axios.get('https://backends-theta.vercel.app/movies');
-            // console.log(movieData);
+            const movieData = await axios.get('https://backends-theta.vercel.app/movies');
+            console.log(movieData);
         } catch (error) {
             console.error("Error submitting review:", error);
             toast.error("An error occurred while submitting your review. Please try again later.");
